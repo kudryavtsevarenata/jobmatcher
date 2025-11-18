@@ -1,0 +1,24 @@
+Гвидо ван Россум
+Python Developer
+
+Опыт работы: 3.3 года
+Текущая позиция: Python Developer в стартапе "PySnake"
+Зарплатные ожидания: от 120 000 рублей на руки
+
+Технологический стек:
+Python, FastAPI, Flask, SQL, PostgreSQL, SQLite, Git, Docker, Pandas, NumPy, Linux, CI/CD
+
+Ключевые проекты:
+- Разработка микросервиса обработки логов (FastAPI + PostgreSQL + Docker) - 100k RPS
+- ETL-пайплайн для аналитики (Pandas + Airflow) - сократил время обработки с 4 часов до 15 минут
+- Автоматизация тестирования (Pytest + GitHub Actions) - покрытие 92%
+
+Ищу проекты:
+- Backend-разработка на Python (FastAPI/DRF)
+- Data Engineering / ETL-пайплайны
+- DevOps-задачи с Docker/Kubernetes
+- Работа с большими данными (Pandas, PySpark - готов учиться)
+
+О себе:
+Ответственный, быстро обучаюсь, люблю чистый код и автоматизацию.
+Английский B2 (читаю документацию без проблем)
