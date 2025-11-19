@@ -1,0 +1,48 @@
+@startuml
+
+rectangle "Input" as input {
+  file "resume_text.txt" as resume
+}
+
+component "LLM" as llm
+
+package "1. Resume Parsing" as resume_parse {
+  component "Resume Parsing" as resume_parser
+  database "Candidate Profile\nJSON" as candidate_profile
+}
+
+component "hh.ru API" as hh_api
+
+package "2. Vacancy Extraction" as vacancy_extract {
+  component "Vacancy Extractor" as vacancy_extractor
+  note left : bs4, requests
+  database "Vacancy List\n[50 items]" as vacancy_list
+}
+
+package "3. Matching" as llm_match {
+  component "Matcher" as matcher
+  database "Top 20 Vacancies\n[match %]" as top_vacancies
+}
+
+package "4. Report Generation" as report_gen {
+  file "JobMatch_Report.pdf" as final_report
+  note left : pdfkit, jinja2
+}
+
+input --> resume_parse
+resume_parser <--> llm
+resume_parser --> candidate_profile
+vacancy_extractor --> vacancy_list
+vacancy_extractor <--> hh_api
+
+candidate_profile --> vacancy_extractor
+candidate_profile --> matcher
+vacancy_list --> matcher
+matcher --> top_vacancies
+matcher <--> llm
+
+top_vacancies --> final_report
+
+
+
+@enduml
