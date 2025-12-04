@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JobMatch</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1 { color: #2c3e50; }
+        .skill { background: #e8f4fc; padding: 5px 10px; border-radius: 5px; display: inline-block; margin: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #f2f2f2; }
+        .bar { height: 20px; background: #4CAF50; border-radius: 10px; }
+    </style>
+</head>
+<body>
+<h1>Подбор вакансий под ваше резюме</h1>
+<p><strong>Желаемая должность:</strong> {{ candidate.desired_position }}</p>
+<p><strong>Навыки:</strong>
+    {% for skill in candidate.hard_skills %}
+    <span class="skill">{{ skill }}</span>
+    {% endfor %}
+</p>
+<p><strong>Опыт:</strong> {{ candidate.years_experience }} лет</p>
+
+<h2>Топ-20 подходящих вакансий</h2>
+<table>
+    <tr>
+        <th>Вакансия</th><th>Компания</th><th>Зарплата</th><th>Совпадение</th><th>Причина</th>
+    </tr>
+    {% for m in matches %}
+    <tr>
+        <td><a href="{{ m.url }}" target="_blank">{{ m.title }}</a></td>
+        <td>{{ m.company }}</td>
+        <td>{{ m.salary }}</td>
+        <td>
+            <div class="bar" style="width: {{ m.match_percent }}%;"></div>
+            {{ m.match_percent }}%
+        </td>
+        <td>{{ m.reason }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p><small>Сгенерировано: {{ date }}</small></p>
+</body>
+</html>

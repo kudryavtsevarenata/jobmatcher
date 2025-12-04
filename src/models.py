@@ -12,3 +12,11 @@ class Vacancy(BaseModel):
     company: str
     salary: str = "N/A"
     url: str
+
+class MatchResult(BaseModel):
+    title: str
+    company: str
+    salary: str
+    match_percent: int = Field(..., ge=0, le=100)
+    reason: str
+    url: str
