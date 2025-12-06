@@ -1,0 +1,39 @@
+Алексей Федоров
+Java Backend Developer
+
+Опыт работы: 2.5 года
+Текущая позиция: Java Backend Developer в "FinTech Innovations"
+Зарплатные ожидания: от 100 000 рублей на руки
+
+Технологический стек:
+Core: Java 11/17, Spring Boot 2.7/3.x, Spring Data JPA, Spring Security (JWT/OAuth2)
+Базы данных: Oracle, MySQL, Redis, Flyway/Liquibase
+Инструменты: Docker, Docker Compose, Kafka, RabbitMQ, Swagger/OpenAPI
+Тестирование: JUnit 5, Mockito, Testcontainers, Postman
+DevOps: GitLab CI/CD, AWS (EC2, S3, RDS basics), Grafana/Prometheus
+
+Ключевые проекты:
+1. Разработка REST API для мобильного банка (Spring Boot + Oracle + Redis)
+   - Реализовал 20+ endpoint-ов с документацией Swagger
+   - Настроил кэширование часто запрашиваемых данных (снизил нагрузку на БД на 60%)
+   - Интеграция с SMS-сервисом и email-уведомлениями
+
+2. Сервис асинхронной обработки документов
+   - Spring Boot + RabbitMQ для очередей задач
+   - Генерация PDF отчетов (Apache PDFBox)
+   - Мониторинг через Spring Actuator + Prometheus
+
+3. Микросервис для верификации пользователей
+   - Интеграция с внешними API (Госуслуги, банки)
+   - Шифрование sensitive данных (Jasypt)
+   - Нагрузочное тестирование (JMeter)
+
+Ищу проекты:
+- Разработка финансовых/банковских систем
+- Создание микросервисов с Spring Cloud
+- Работа с event-driven архитектурой
+- Оптимизация производительности существующих систем
+
+О себе:
+Внимание к деталям, опыт работы в Agile/Scrum, пишу чистый поддерживаемый код, изучаю DDD и clean architecture.
+Английский B1+.
