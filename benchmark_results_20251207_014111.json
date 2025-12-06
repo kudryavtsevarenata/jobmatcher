@@ -1,0 +1,28 @@
+{
+  "timestamp": "20251207_014111",
+  "system_info": {
+    "cpu_cores": 16,
+    "total_memory_gb": 15.403499603271484,
+    "available_memory_gb": 4.350162506103516
+  },
+  "results": [
+    {
+      "model": "llama3.2:3b",
+      "time": 14.089823722839355,
+      "peak_memory": 7398.1875,
+      "average_memory": 6338.914248511905
+    },
+    {
+      "model": "gemma2:9b",
+      "time": 34.04136323928833,
+      "peak_memory": 7435.8046875,
+      "average_memory": 5603.900568181818
+    },
+    {
+      "model": "qwen2.5:7b",
+      "time": 26.423253536224365,
+      "peak_memory": 6783.8671875,
+      "average_memory": 4267.527238175676
+    }
+  ]
+}
